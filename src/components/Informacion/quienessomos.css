@@ -1,0 +1,52 @@
+.QuienesSomos>div{
+    display:flex;
+    justify-content: center;
+
+}
+
+
+.QuienesSomosContainer{
+    padding:10px;
+    width:70%;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    border:2px solid var(--base-color-primary);
+    border-radius:10px;
+    gap:50px;
+    cursor:pointer;
+    transition: 1s;
+    
+}
+.QuienesSomosContainer:hover{
+    background-color: var(--base-color-secondary);
+    color: var(--color-secondary);
+    transition: 1s;
+}
+.QuienesSomosContainer:hover >.QuienesSomosConatinerTitle{
+    color:var(--color-secondary);
+    font-weight:900;
+}
+
+
+
+.QuienesSomosContainer > div{
+    display:flex;
+    justify-content: center;
+    width:100%;
+}
+.QuienesSomosContainer > .QuienesSomosConatinerTitle{
+    font-size: 40px;
+    font-family: var(--font-text);
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--base-color-primary);
+    display:flex;
+    justify-content: center !important;
+
+}
+.QuienesSomosContainer > .QuienesSomosConatinerPharrafe{
+    font-family: var(--font-title);
+    font-size: 20px;
+
+}

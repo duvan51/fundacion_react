@@ -1,0 +1,1744 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis&display=swap');
+
+@import "bootstrap/scss/bootstrap";
+
+
+/*colors bases*/
+$base-color-primary : rgb(255, 109, 114);
+$base-color-secondary: #3398DB;
+$base-color-secondary-t: #3398db52;
+$base-color-terceary: white;
+
+/*colors letters*/
+$color-letter-prymary: black;
+$color-letter-secondary:white;
+
+
+/*letters font-family*/
+$font-text:'Macondo', cursive;
+$font-title:'Questrial', sans-serif;
+$font-specially:'Climate Crisis', cursive;
+
+
+/* medidas */
+$heigth-header:60px;
+
+/*******  media querys  *******/
+$breakpoints:(
+    sm : 540px,
+    md: 768px,
+    lg: 1024px,
+    ex: 2600px
+
+);
+@mixin media-up($breakpoint){
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)){
+        @content;
+    } 
+        
+    
+}
+/*---------------------------*/
+
+
+
+html{
+    width:100%;
+    height: 100vh;
+}
+body{
+
+    width:100%;
+    height: 100%;
+
+}
+.root{
+    width:100%;
+    height: 100%;
+}
+ /*-------------     movil       ---------------*/
+.App{
+    background: $base-color-secondary;
+    align-items: center;
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    
+   
+    /* home page  */
+    .header{
+        width:100%;
+        height: $heigth-header;
+        background: $base-color-secondary;
+        position: fixed;
+        left: 0;
+        z-index: 1000;
+        transition-duration: 2s;
+        @include media-up(lg){
+            display: flex;
+            justify-content: center;
+           
+        } 
+        @include media-up(md){
+            display: flex;
+            justify-content: center;
+           
+        } 
+        
+        .headerContainer{
+            width:100%;
+            height: 100%;
+            display:flex;
+            flex-direction: column;
+            position: absolute;
+            
+            @include media-up(lg){
+            width: 80%;
+           
+            } 
+           
+
+            .headerContainerlogo{
+                width:auto;
+                height: $heigth-header;
+            }
+            .headerContainerBtn{
+                width:45px;
+                height:45px;
+                z-index: 1;
+                position:absolute;
+                top:2px;
+                right: 2px;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-around;
+                border:1px solid black;
+                border-radius:10px;
+                cursor:pointer;
+                transition-duration: 1s;
+                
+                
+                
+                i{
+                    font-size: 25px;
+                    color:black;
+                    transition-duration: 0.5s;
+                    transform: rotate(50deg);
+                   
+                    
+                }
+                i:hover{
+                    transition-duration: 0.5s;
+                    transform: rotate(-25deg);
+                    color:$color-letter-secondary;
+                }
+                
+               
+            }
+            .headerContainerBtn:hover{
+                
+                background: $base-color-primary;
+                color:$color-letter-secondary;
+                border-color:$color-letter-secondary;
+                transition-duration: 0.5s;
+                transform: rotate(50deg);
+            }
+            
+            
+            .headerContainerMenu{
+                position: fixed;
+                width:60%;
+                height: 100vh;
+                top:0;
+                background: $base-color-primary;
+                display:flex;
+                transition-duration: 1s;
+                
+                .ul{
+                    width:100%;
+                    display:flex;
+                    flex-direction: column;
+                    
+                    
+                    .logoNameUl{
+                        width:100%;
+                        height: 200px;
+                        display:flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-items: center;
+                        justify-content: center;
+
+
+                        .logoNameUlImg{
+                            background-color: aliceblue;
+                            width:80%;
+                            height: 80%;
+                        }
+                    }
+                    li{
+                        width:100%;
+                        height: 40px;
+                        font-family: $font-title;
+                        font-size: 25px;
+                        font-weight: bold;
+                        letter-spacing: 1px;
+                        list-style: none;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+ 
+                    }
+                    li:hover{
+                        background-color: #3398DB;
+                    }
+                    
+                }
+            }
+            
+            
+        }
+    }
+    .bod{
+
+        .carrousel{
+            width:100%;
+            height: auto;
+            position: relative;
+            .carousel{
+                height: auto;
+                transform: translateY(-10) !important;
+
+                .carousel-indicators{
+
+                }
+                .carousel-inner{
+                    .carousel-item{
+                        @include media-up(lg){
+                            height: 95vh;
+                            background-size:cover;
+                            
+                        
+                        } 
+
+
+
+                        .d-block{
+                            opacity: 0.7;
+
+                        }
+                        .carousel-caption{
+                            left: 0%;
+                            @include media-up(lg){
+                
+                                align-items: center;
+                                display: flex !important;
+                                font-size: 30px;
+                                font-family: $font-text;
+                                font-weight: 100;
+                                letter-spacing: 5px; 
+                                
+
+                                h5{
+                                    font-family: $font-specially;
+                                    letter-spacing: 10px; 
+                                    font-weight: 200;  
+                                    font-size: 40px;  
+                                }
+                            
+                            } 
+                        }
+                    }
+
+                }
+            }
+        }
+        .MainTwo{
+            
+            position: relative;
+            width:100%;
+            height: auto;
+            background: white;
+            padding-top:67px;
+            padding-bottom:20px;
+            display: flex;
+            
+            .MainTwoSections{
+                display: flex;
+                flex-direction: column; 
+                .MainTwonSectionOne{
+                    @include media-up(lg){
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        gap: 160px;
+                        transform: translateY(100px);
+                        
+                    } 
+                    
+                    .MainTwoTitle{
+                        display: flex;
+                        justify-content: center;
+                        
+                    
+                        h1{
+                            color: black;
+                            font-family: $font-specially;
+                            letter-spacing: 10px;
+                        }
+                    }       
+                    .QuienesSomos{
+                    width:100%;
+                    height: 100%;
+                    display:flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @include media-up(lg){
+                        height: 200px;
+                        
+                    }
+                    .QuienesSomosContainer{
+                        @include media-up(lg){
+                            height: 500px;
+                            width:500px;
+                            background-color: $base-color-secondary-t;
+                            
+                        }
+                    }
+                    .QuienesSomosContainer:hover{
+                        background-color: var(--base-color-secondary);
+                        color: var(--color-secondary);
+                        transition: 1s;
+                    }
+                    }
+                }
+        
+                .MainTwonSectionTwo{
+                        display: flex;
+                        justify-content: flex-end;
+                        @include media-up(lg){
+                            display: flex;
+                            justify-content: flex-end;
+                            align-items: flex-end;
+                            height: 470px;
+                        }
+                        
+                        
+                        
+                        button{
+                            width:300px;
+                            height: 120px;
+                            font-family: $font-title;
+                            font-weight: bold;
+                            font-size: 30px;
+                            border-radius: 10px;
+                            background-color: $base-color-primary;
+                            color:white;
+                        }
+                }
+
+            }
+            .MainTwoImage{
+                margin-top: -80px;
+                display: none;
+
+            }
+
+            
+        }
+        .MainThree{
+            width: 100%;
+            height: auto;
+            display:flex;
+            flex-direction: column;
+            background: $base-color-secondary;
+            align-items: center;
+            justify-content: center;
+            @include media-up(lg){
+                display:flex;
+                justify-content:  center;
+                margin-top:410px;
+                height: 100vh;
+                flex-direction: column;
+            
+            
+                
+            }
+
+            .MainThreeTitle{
+                width:100%;
+                height: auto;
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                @include media-up(lg){
+                    transform: translateY(30px);  
+                    
+                }
+
+
+
+                .MainThreeTileT{
+                    width:300px;
+                    height: 300px;
+                    img{
+                        width:100%;
+                        height: 100%;
+                    }
+                }
+                .MainThreeTitleO{
+                    color: black;
+                    font-family: $font-specially;
+                    letter-spacing: 10px;
+
+                }
+            }
+        
+        
+        }
+        .MainFour{
+            width:100%;
+            height: auto;
+            background: $base-color-terceary;
+            
+            .MainFourT{
+                width:100%;
+                height: auto;
+                display:flex;
+                justify-content: center;
+                height: 80px;
+                align-items: flex-end;
+                .MainFourTitle{
+                font-family: $font-specially;  
+                font-weight: 500;
+                letter-spacing:10px;
+                font-size:35px;
+
+                }
+            }
+            .areaNiños{
+                width:100%;
+                height: 100%;
+                margin-top:50px;
+
+                .areaNiñosImages{
+                    display:flex;
+                    flex-direction: column;
+                    gap:20px;
+                .SectionTarjet:nth-child(odd){
+                        background-color: $base-color-primary;
+                        gap:16px;
+                        flex-direction: row-reverse;
+                        .tarjet{
+                            transform: translateX(2px);
+                        }
+                    }    
+
+                    .SectionTarjet{
+                        width:100%;
+                        height: auto;
+                        align-items: center;
+                        justify-content: center;
+                        gap:65px;
+                    
+
+                        div{
+                            width:200px;
+                            height: 200px;
+                            display:flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+
+                            .title{
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            z-index:1;
+                            padding:10px;
+                            margin:0;
+                            }
+
+                            img{
+                                width:90%;
+                                height: 90%;
+                                
+                            }
+                            img:hover{
+                            opacity: 0.07;
+                            -webkit-transition: opacity 500ms;
+                            -moz-transition: opacity 500ms;
+                            -o-transition: opacity 500ms;
+                            -ms-transition: opacity 500ms;
+                            transition: opacity 500ms;
+
+                            }
+                        }
+                        .tarjet{
+                            border:2px solid $base-color-primary;
+                            cursor:pointer;
+                            border-radius: 25px;
+                        }
+                        .tarjet:hover{
+                            background-color: $base-color-secondary;
+                            color:$color-letter-secondary;
+
+                        }
+                        .info-desarollos{
+                            
+                        }
+                        
+                    
+                    }
+                    
+
+                }
+            }
+        }
+        .MainFive{
+            width:100%;
+            height: auto;
+            background-color: $base-color-secondary;
+            margin-top: 20px;
+            text-align: center;
+            padding-top:20px;
+            
+
+            .MainFiveTitle{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 25px;
+                @include media-up(lg){
+                    color: black;
+                    font-family: $font-specially;
+                    letter-spacing: 10px;
+                    font-size: 40px;  
+                }
+            }
+            .MainFiveTitleImg {
+                width: 120px;
+                height: 120px;
+            }
+            .MainFiveOptions{
+                display:grid;
+                grid-template-columns: 45% 45%;
+                justify-content: center;
+                @include media-up(lg){
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                }
+
+                div{
+                    padding-top:10px;
+                    margin-left: 2.5%;
+                    margin-right: 2.5%;
+                    margin-top: 5px;
+                    background-color: $base-color-primary;
+                    height: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    
+                    .MainFiveTitleTarjet{
+                        width: auto;
+                        height: 50px;
+                        font-size: auto;
+                    }
+                }
+
+            }
+            
+        }
+    }
+    .iconos{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction:column;
+        #btn-mas{
+            width: 55px;
+            height: 55px;
+            display: none;
+        }
+        #btn-mas:checked~ {
+            
+            
+            .iconosSecundarios{
+                a{
+                    margin-bottom: 10px;
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .iconoUnid1{
+                background:$base-color-primary;
+                transform: rotate(137deg);
+            }
+            .iconoUnid1:hover{
+                    background-color: rgb(255, 255, 255);
+                    
+                    ion-icon{
+                        color: $base-color-primary;
+                        font-size: 30px;
+                    }
+            }
+            
+        }
+        .iconoUnid1{
+            background:rgb(226, 129, 132);
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius:50%;
+            box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: all 500ms ease;
+            font-size: 28px;
+            font-weight: bold;
+            ion-icon{
+                color: white;
+            }
+
+        }
+
+
+        .iconosSecundarios{
+            gap:10px;
+            display:flex;
+            flex-direction: column;
+           
+            a{
+                background-color: $base-color-primary;
+                width: 55px;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius:50%;
+                box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+                cursor: pointer;
+                transition: all 500ms ease;
+
+                margin-bottom: -15px;
+                opacity: 0;
+                visibility: hidden;
+                ion-icon{
+                    color: white;
+                    font-size: 25px;
+                    
+                }
+            }
+           
+                a:hover{
+                    background-color: rgb(255, 255, 255);
+                    
+                    ion-icon{
+                        color: $base-color-primary;
+                        font-size: 30px;
+                        
+                    }
+            }   
+                
+                
+        
+        
+        }
+        
+
+    }
+    footer{
+        
+        @include media-up(lg){
+            width: 100%;
+        }
+    }
+
+    
+
+
+
+
+
+
+
+    /* end home page  */
+
+    .DonacionPage{
+        margin-top:60px;
+        width:100%;
+        
+        .DonacionTitle{
+            width:100%;
+            height: 250px;
+            display: flex;
+            margin-top: 10px;
+
+
+            .DonacionTitleImage{
+                width:100%;
+                height: 100%;
+                text-align: center;
+                position: absolute;
+                
+
+                .imageTitle{
+                    width:250px;
+                    height: 250px;
+                    opacity: 0.4;
+
+                }
+            }
+
+            .DonacionTitl{
+                font-size: 45px;
+                font-weight: bold;
+                font-family: 'Indie Flower', cursive;
+                text-align: center;
+                position:relative;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+
+
+    .ecommercePage{
+        width:100%;
+        padding-left:10px;
+        padding-right: 10px;
+        margin-top:50px;
+        height: 100%;
+        .BodyProductsHeader{
+            width: 100%;
+            height: auto;
+            background-color: #3398DB;
+
+        }
+        .bodyEcommerce{
+            padding-top:50px;
+            padding-bottom:50px;
+
+            .bodyEcommerceProductsSelect{
+                background-color: red;
+                width:100%;
+                height: 500px;
+            }
+
+            .bodyEcommerceProducts{
+                display: grid;
+                grid-template-columns: auto;
+                justify-items: center;
+                gap:2px;
+                .card{
+                    width:400px;
+                    height:150px;
+                    padding-top:2px;
+                    padding-bottom: 2px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    display:flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap:10px;
+                    img{
+                        width:120px;
+                        height: 100px;
+
+                    }
+                    .CardBody{
+                        display:flex;
+                        width:220px;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        .card-body{
+                            padding:0px;
+                            margin: 0px;
+
+                            .card-text{
+                                font-weight: bold;
+                                font-size: 20px;
+
+                            }
+                            .card-cash{
+                                font-size: 30px;
+                            }
+
+                        }
+                        .card-comprar{
+                            display:flex;
+                            width:100%;
+                            justify-content: flex-end;
+
+                            .comprar{
+                                width:80px;
+                                height: 20px;
+                                display:flex;
+                                justify-content: space-evenly;
+                                
+                                button{
+                                    width:30px;
+                                    
+                                }
+                                .btn-comprar{
+                                    background-color: green;
+                                }
+                                .btn-agregar{
+                                    background-color:yellow;
+                                }
+    
+    
+                            }
+
+                        }
+                        
+                    }
+
+                }
+            }
+        }
+        
+
+
+    }
+    .QuienesSomos{
+        margin-top:70px;
+        height: auto;
+        width: 100%;
+
+        .QuienesSomosHeader{
+
+        }
+        .QuienesSomosBody{
+            background-color: white;
+            color: black;
+            padding-left: 5px;
+            padding-right: 5px;
+            display:flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .QuienesSomosBodyQuienesSomos{
+                text-align: center;
+
+                .QuienesSomosBodyQuienesSomosTitle{
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-bottom: 20px;
+                    text-align: center;
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .line{
+                        width: 100px;
+                        height: 8px;
+                        background-color: $base-color-primary;
+                        margin-top:10px;
+                    }
+
+                }
+                
+                .QuienesSomosBodyQuienesSomosDescription{
+                    font-size: 18px;
+                    text-align: justify;
+                    
+                }
+
+
+            }
+            .QuienesSomosBodyMision{
+
+            }
+            .QuienesSomosBodyVision{
+        }
+        
+    }
+
+
+
+    .ErrorPage{
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+    }
+
+
+    /*-------------     aqui viene el footer        ---------------*/
+
+    .shadow{
+        margin-top: 20px;
+        background-color: $base-color-primary;
+
+    }
+}
+}
+
+
+
+
+
+   /*-------------     lg 1080px       ---------------*/
+
+
+.App{
+
+    @include media-up(lg){
+            background: $base-color-secondary;
+            align-items: center;
+            width:100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+
+           
+            /* home page  */
+            .header{
+                width:100%;
+                height: $heigth-header;
+                background: $base-color-secondary;
+                position: fixed;
+                left: 0;
+                z-index: 1000;
+                transition-duration: 2s;
+                @include media-up(lg){
+                    display: flex;
+                    justify-content: center;
+                   
+                } 
+                @include media-up(md){
+                    display: flex;
+                    justify-content: center;
+                   
+                } 
+                
+                .headerContainer{
+                    width:100%;
+                    height: 100%;
+                    display:flex;
+                    flex-direction: column;
+                    position: absolute;
+                    
+                    @include media-up(lg){
+                    width: 80%;
+                   
+                    } 
+                   
+        
+                    .headerContainerlogo{
+                        width:auto;
+                        height: $heigth-header;
+                    }
+                    .headerContainerBtn{
+                        width:45px;
+                        height:45px;
+                        z-index: 1;
+                        position:absolute;
+                        top:2px;
+                        right: 2px;
+                        display: flex;
+                        align-items: flex-end;
+                        justify-content: space-around;
+                        border:1px solid black;
+                        border-radius:10px;
+                        cursor:pointer;
+                        transition-duration: 1s;
+                        
+                        
+                        
+                        i{
+                            font-size: 25px;
+                            color:black;
+                            transition-duration: 0.5s;
+                            transform: rotate(50deg);
+                           
+                            
+                        }
+                        i:hover{
+                            transition-duration: 0.5s;
+                            transform: rotate(-25deg);
+                            color:$color-letter-secondary;
+                        }
+                        
+                       
+                    }
+                    .headerContainerBtn:hover{
+                        
+                        background: $base-color-primary;
+                        color:$color-letter-secondary;
+                        border-color:$color-letter-secondary;
+                        transition-duration: 0.5s;
+                        transform: rotate(50deg);
+                    }
+                    
+                    
+                    .headerContainerMenu{
+                        position: fixed;
+                        width:60%;
+                        height: 100vh;
+                        top:0;
+                        background: $base-color-primary;
+                        display:flex;
+                        transition-duration: 1s;
+                        
+                        .ul{
+                            width:100%;
+                            display:flex;
+                            flex-direction: column;
+                            
+                            
+                            .logoNameUl{
+                                width:100%;
+                                height: 200px;
+                                display:flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-items: center;
+                                justify-content: center;
+        
+        
+                                .logoNameUlImg{
+                                    background-color: aliceblue;
+                                    width:80%;
+                                    height: 80%;
+                                }
+                            }
+                            li{
+                                width:100%;
+                                height: 40px;
+                                font-family: $font-title;
+                                font-size: 25px;
+                                font-weight: bold;
+                                letter-spacing: 1px;
+                                list-style: none;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+         
+                            }
+                            li:hover{
+                                background-color: #3398DB;
+                            }
+                            
+                        }
+                    }
+                    
+                    
+                }
+            }
+            .bod{
+                width: 100%;
+                margin-top: 60px;
+        
+                .carrousel{
+                    width:100%;
+                    height: auto;
+                    position: relative;
+                    
+                    
+                
+                
+                    .carousel{
+                        height: auto;
+                        height: 90vh;
+                        background-size:cover;
+                            
+                        
+                      
+        
+                        .carousel-indicators{
+        
+                        }
+                        .carousel-inner{
+                            .carousel-item{
+                                @include media-up(lg){
+                                    height: 95vh;
+                                    background-size:cover;
+                                    
+                                
+                                } 
+        
+        
+        
+                                .d-block{
+                                    opacity: 0.7;
+        
+                                }
+                                .carousel-caption{
+                                    left: 0%;
+                                    @include media-up(lg){
+                        
+                                        align-items: center;
+                                        display: flex !important;
+                                        font-size: 30px;
+                                        font-family: $font-text;
+                                        font-weight: 100;
+                                        letter-spacing: 5px; 
+                                        
+        
+                                        h5{
+                                            font-family: $font-specially;
+                                            letter-spacing: 10px; 
+                                            font-weight: 200;  
+                                            font-size: 40px;  
+                                        }
+                                    
+                                    } 
+                                }
+                            }
+        
+                        }
+                    }
+                }
+                .MainTwo{
+                    
+                    position: relative;
+                    width:100%;
+                    height: auto;
+                    background: white;
+                    padding-top:67px;
+                    padding-bottom:20px;
+                    display: flex;
+                    justify-content:  center;
+                    margin-top:150px;
+                    height: 80vh;
+                    flex-direction: column;
+                    
+                    
+                
+                    .MainTwoSections{
+                        display: flex;
+                        flex-direction: column-reverse;
+                        align-items: center;
+                        margin-top: 554px;
+                        gap:25px;
+                        
+                        div:nth-child(1){
+                            .MainTwonSectionOne{
+                                display: flex;
+                                flex-direction: row-reverse;
+                                justify-content: space-evenly;
+                                width:80%;
+    
+                                .MainTwoTitle{
+                                    display: flex;
+                                    justify-content: center;
+                                  
+                                
+                                    h1{
+                                        color: black;
+                                        font-family: $font-specially;
+                                        letter-spacing: 10px;
+                                    }
+                                }       
+                                .QuienesSomos{
+                                width:100%;
+                                height: 100%;
+                                display:flex;
+                                align-items: center;
+                                justify-content: center;
+                                height: 200px;
+            
+                                
+                                .QuienesSomosContainer{
+                                    height: 500px;
+                                        width:500px;
+                                        background-color: $base-color-secondary-t;
+                                        
+                                
+                                }
+                                .QuienesSomosContainer:hover{
+                                    background-color: var(--base-color-secondary);
+                                    color: var(--color-secondary);
+                                    transition: 1s;
+                                }
+                                }
+                            }
+                        }
+                        
+                
+                        .MainTwonSectionTwo{
+                                display: flex;
+                                justify-content: flex-end;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                height: 470px;
+                                z-index:1;
+
+                                button{
+                                    width:300px;
+                                    height: 120px;
+                                    font-family: $font-title;
+                                    font-weight: bold;
+                                    font-size: 30px;
+                                    border-radius: 10px;
+                                    background-color: $base-color-primary;
+                                    color:white;
+                                }
+                        }
+        
+                    }
+                    .MainTwoImage{
+                        margin-top: -457px;
+                        display: flex;
+                        
+        
+                    }
+        
+                    
+                }
+                .MainThree{
+                    width: 100%;
+                    height: auto;
+                    display:flex;
+                    flex-direction: column;
+                    background: $base-color-secondary;
+                    align-items: center;
+                    justify-content: center;
+                    @include media-up(lg){
+                        display:flex;
+                        justify-content:  center;
+                        margin-top:523px;
+                        height: 100vh;
+                        flex-direction: column;
+                    
+                    
+                        
+                    }
+        
+                    .MainThreeTitle{
+                        width:100%;
+                        height: auto;
+                        display:flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        @include media-up(lg){
+                            transform: translateY(30px);  
+                            
+                        }
+        
+        
+        
+                        .MainThreeTileT{
+                            width:300px;
+                            height: 300px;
+                            img{
+                                width:100%;
+                                height: 100%;
+                            }
+                        }
+                        .MainThreeTitleO{
+                            color: black;
+                            font-family: $font-specially;
+                            letter-spacing: 10px;
+        
+                        }
+                    }
+                
+                
+                }
+                .MainFour{
+                    width:100%;
+                    height: auto;
+                    background: $base-color-terceary;
+                    
+                    .MainFourT{
+                        width:100%;
+                        height: auto;
+                        display:flex;
+                        justify-content: center;
+                        height: 80px;
+                        align-items: flex-end;
+                        .MainFourTitle{
+                        font-family: $font-specially;  
+                        font-weight: 500;
+                        letter-spacing:10px;
+                        font-size:35px;
+        
+                        }
+                    }
+                    .areaNiños{
+                        width:100%;
+                        height: 100%;
+                        margin-top:50px;
+        
+                        .areaNiñosImages{
+                            display:flex;
+                            flex-direction: column;
+                            gap:20px;
+                        .SectionTarjet:nth-child(odd){
+                                background-color: $base-color-primary;
+                                gap:266px;
+                                .tarjet{
+                                    transform: translateX(250px);
+                                }
+                            }    
+        
+                            .SectionTarjet{
+                                width:100%;
+                                height: auto;
+                                align-items: center;
+                                justify-content: center;
+                                gap:65px;
+                            
+        
+                                div{
+                                    width:400px;
+                                    height: 400px;
+                                    display:flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    justify-content: center;
+        
+                                    .title{
+                                    position:absolute;
+                                    top:0;
+                                    left:0;
+                                    z-index:1;
+                                    padding:10px;
+                                    margin:0;
+                                    }
+        
+                                    img{
+                                        width:90%;
+                                        height: 90%;
+                                        
+                                    }
+                                    img:hover{
+                                    opacity: 0.07;
+                                    -webkit-transition: opacity 500ms;
+                                    -moz-transition: opacity 500ms;
+                                    -o-transition: opacity 500ms;
+                                    -ms-transition: opacity 500ms;
+                                    transition: opacity 500ms;
+        
+                                    }
+                                }
+                                .tarjet{
+                                    border:2px solid $base-color-primary;
+                                    cursor:pointer;
+                                    border-radius: 25px;
+                                }
+                                .tarjet:hover{
+                                    background-color: $base-color-secondary;
+                                    color:$color-letter-secondary;
+        
+                                }
+                                .info-desarollos{
+                                    
+                                }
+                                
+                            
+                            }
+                            
+        
+                        }
+                    }
+                }
+                .MainFive{
+                    width:100%;
+                    height: auto;
+                    background-color: $base-color-secondary;
+                    margin-top: 20px;
+                    text-align: center;
+                    padding-top:20px;
+                    
+        
+                    .MainFiveTitle{
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        font-size: 25px;
+                        @include media-up(lg){
+                            color: black;
+                            font-family: $font-specially;
+                            letter-spacing: 10px;
+                            font-size: 40px;  
+                        }
+                    }
+                    .MainFiveTitleImg {
+                        width: 120px;
+                        height: 120px;
+                    }
+                    .MainFiveOptions{
+                        display:grid;
+                        grid-template-columns: 45% 45%;
+                        justify-content: center;
+                        @include media-up(lg){
+                            padding-top: 60px;
+                            padding-bottom: 60px;
+                        }
+        
+                        div{
+                            padding-top:10px;
+                            margin-left: 2.5%;
+                            margin-right: 2.5%;
+                            margin-top: 5px;
+                            background-color: $base-color-primary;
+                            height: 300px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-around;
+                            
+                            .MainFiveTitleTarjet{
+                                width: auto;
+                                height: 50px;
+                                font-size: auto;
+                            }
+                        }
+        
+                    }
+                    
+                }
+            }
+            .iconos{
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                display: flex;
+                flex-direction:column;
+                #btn-mas{
+                    width: 55px;
+                    height: 55px;
+                    display: none;
+                }
+                #btn-mas:checked~ {
+                    
+                    
+                    .iconosSecundarios{
+                        a{
+                            margin-bottom: 10px;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                    .iconoUnid1{
+                        background:$base-color-primary;
+                        transform: rotate(137deg);
+                    }
+                    .iconoUnid1:hover{
+                            background-color: rgb(255, 255, 255);
+                            
+                            ion-icon{
+                                color: $base-color-primary;
+                                font-size: 30px;
+                            }
+                    }
+                    
+                }
+                .iconoUnid1{
+                    background:rgb(226, 129, 132);
+                    width: 55px;
+                    height: 55px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius:50%;
+                    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+                    cursor: pointer;
+                    transition: all 500ms ease;
+                    font-size: 28px;
+                    font-weight: bold;
+                    ion-icon{
+                        color: white;
+                    }
+        
+                }
+        
+        
+                .iconosSecundarios{
+                    gap:10px;
+                    display:flex;
+                    flex-direction: column;
+                   
+                    a{
+                        background-color: $base-color-primary;
+                        width: 55px;
+                        height: 55px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius:50%;
+                        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+                        cursor: pointer;
+                        transition: all 500ms ease;
+        
+                        margin-bottom: -15px;
+                        opacity: 0;
+                        visibility: hidden;
+                        ion-icon{
+                            color: white;
+                            font-size: 25px;
+                            
+                        }
+                    }
+                   
+                        a:hover{
+                            background-color: rgb(255, 255, 255);
+                            
+                            ion-icon{
+                                color: $base-color-primary;
+                                font-size: 30px;
+                                
+                            }
+                    }   
+                        
+                        
+                
+                
+                }
+                
+        
+            }
+            footer{
+                
+                @include media-up(lg){
+                    width: 100%;
+                }
+            }
+        
+            
+        
+        
+        
+        
+        
+        
+        
+            /* end home page  */
+        
+            .DonacionPage{
+                margin-top:60px;
+                width:100%;
+                
+                .DonacionTitle{
+                    width:100%;
+                    height: 250px;
+                    display: flex;
+                    margin-top: 10px;
+        
+        
+                    .DonacionTitleImage{
+                        width:100%;
+                        height: 100%;
+                        text-align: center;
+                        position: absolute;
+                        
+        
+                        .imageTitle{
+                            width:250px;
+                            height: 250px;
+                            opacity: 0.4;
+        
+                        }
+                    }
+        
+                    .DonacionTitl{
+                        font-size: 45px;
+                        font-weight: bold;
+                        font-family: 'Indie Flower', cursive;
+                        text-align: center;
+                        position:relative;
+                        z-index: 2;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+        
+        
+        
+            .ecommercePage{
+                width:100%;
+                padding-left:10px;
+                padding-right: 10px;
+                margin-top:50px;
+                height: 100%;
+                .BodyProductsHeader{
+                    width: 100%;
+                    height: auto;
+                    background-color: #3398DB;
+        
+                }
+                .bodyEcommerce{
+                    padding-top:50px;
+                    padding-bottom:50px;
+        
+                    .bodyEcommerceProductsSelect{
+                        background-color: red;
+                        width:100%;
+                        height: 500px;
+                    }
+        
+                    .bodyEcommerceProducts{
+                        display: grid;
+                        grid-template-columns: auto;
+                        justify-items: center;
+                        gap:2px;
+                        .card{
+                            width:400px;
+                            height:150px;
+                            padding-top:2px;
+                            padding-bottom: 2px;
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            display:flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: center;
+                            gap:10px;
+                            img{
+                                width:120px;
+                                height: 100px;
+        
+                            }
+                            .CardBody{
+                                display:flex;
+                                width:220px;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                .card-body{
+                                    padding:0px;
+                                    margin: 0px;
+        
+                                    .card-text{
+                                        font-weight: bold;
+                                        font-size: 20px;
+        
+                                    }
+                                    .card-cash{
+                                        font-size: 30px;
+                                    }
+        
+                                }
+                                .card-comprar{
+                                    display:flex;
+                                    width:100%;
+                                    justify-content: flex-end;
+        
+                                    .comprar{
+                                        width:80px;
+                                        height: 20px;
+                                        display:flex;
+                                        justify-content: space-evenly;
+                                        
+                                        button{
+                                            width:30px;
+                                            
+                                        }
+                                        .btn-comprar{
+                                            background-color: green;
+                                        }
+                                        .btn-agregar{
+                                            background-color:yellow;
+                                        }
+            
+            
+                                    }
+        
+                                }
+                                
+                            }
+        
+                        }
+                    }
+                }
+                
+        
+        
+            }
+            .QuienesSomos{
+                margin-top:70px;
+                height: auto;
+                width: 100%;
+        
+                .QuienesSomosHeader{
+        
+                }
+                .QuienesSomosBody{
+                    background-color: white;
+                    color: black;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    display:flex;
+                    flex-direction: column;
+                    gap: 25px;
+        
+                    .QuienesSomosBodyQuienesSomos{
+                        text-align: center;
+        
+                        .QuienesSomosBodyQuienesSomosTitle{
+                            font-size: 30px;
+                            font-weight: bold;
+                            margin-bottom: 20px;
+                            text-align: center;
+                            display:flex;
+                            flex-direction: column;
+                            align-items: center;
+        
+                            .line{
+                                width: 100px;
+                                height: 8px;
+                                background-color: $base-color-primary;
+                                margin-top:10px;
+                            }
+        
+                        }
+                        
+                        .QuienesSomosBodyQuienesSomosDescription{
+                            font-size: 18px;
+                            text-align: justify;
+                            
+                        }
+        
+        
+                    }
+                    .QuienesSomosBodyMision{
+        
+                    }
+                    .QuienesSomosBodyVision{
+                }
+                
+            }
+        
+        
+        
+            .ErrorPage{
+                background-color: black;
+                width: 100%;
+                height: 100vh;
+            }
+        
+        
+            /*-------------     aqui viene el footer        ---------------*/
+        
+            .shadow{
+                margin-top: 20px;
+                background-color: $base-color-primary;
+        
+            }
+        }
+        }
+
+
+
+    
+}

@@ -1,0 +1,11 @@
+.areaNiños{
+    width:100%;
+    height: auto;
+}
+.areaNiñosImages > div:nth-child(2n+1) {
+    display:flex ;
+}
+.areaNiñosImages > div:nth-child(2n) {
+    display:flex;
+    flex-direction: row-reverse;
+}

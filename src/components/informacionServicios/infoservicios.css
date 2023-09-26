@@ -1,0 +1,49 @@
+
+
+.InfoServicios{
+    padding-top:50px;
+    padding-bottom:50px;
+    width:90%;
+    height: auto;
+    display:grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto;
+    gap:20px;
+    
+}
+.infoTarget{
+    width:150px;
+    height: 150px;
+    transition-duration: 0.5s;
+}
+
+
+.InfoServiciosTarjet{
+    background-color: var(--base-color-primary);
+    color:var(--color-secondary);
+    border:1px solid black;
+    display:flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding:5px;
+    justify-content: space-between;
+    transition-duration: 0.5s;
+    
+    
+}
+.InfoServiciosTarjet:hover{
+    transform: scale(1.05);
+    transition-duration: 0.3s;
+    
+}
+.InfoServicios>.InfoServiciosTarjet>div{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.InfoServicios>.InfoServiciosTarjet>button{
+    border:2px solid;
+    border-color:var(--base-color-secondary);
+}
+

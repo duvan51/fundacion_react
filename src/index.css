@@ -1,3 +1,17 @@
+:root{
+  --base-color-primary : rgb(255, 109, 114);
+  --base-color-secondary : #3398DB;
+
+  --color-primary:black;
+  --color-secondary:white;
+
+  --font-text:'Macondo', cursive;
+  --font-title:'Questrial', sans-serif;;
+}
+
+
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
